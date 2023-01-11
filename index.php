@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 include 'includes/autoloader.php';
-require_once './transaction.php';
+// require_once './transaction.php';
 
 $transaction = (new Transaction(100, 'Premiere transaction'))
     ->addTax(8)
