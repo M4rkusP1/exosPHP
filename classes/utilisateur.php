@@ -1,10 +1,9 @@
 <?php
-    class Utilisateur extends User{
+    class Utilisateur implements Users{
         protected $user_name;
         protected $user_region;
         protected $prix_abo;
         protected $user_pass;
-        public const PRIX_ABO = 10;
         
         public function __construct($n, $p, $r){
             $this->user_name = $n;
@@ -24,6 +23,14 @@
             }else{
                 return $this->prix_abo = self::PRIX_ABO;
             }
+        }
+
+        public function getNom(){
+            echo $this->user_name;
+        }
+    
+        public function getPrixAbo(){
+            echo $this->prix_abo;
         }
         
     }

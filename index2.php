@@ -32,5 +32,5 @@ $florian->getNom();
 echo ' : ';
 $florian->getPrixAbo();
 
-$pierre->setBan('Lucas','Guillaume', 'Patrice');
+$pierre->setBan('Jerome','Samy', 'Colbert');
 $mathilde->getBan();

@@ -1,8 +1,12 @@
 <?php
     
-    class Admin extends User{
+    class Admin implements Users{
         protected static $ban;
-        
+        protected $user_name;
+        protected $user_region;
+        protected $prix_abo;
+        protected $user_pass;
+
         public function __construct($n, $p, $r){
             $this->user_name = strtoupper($n);
             $this->user_pass = $p;
@@ -28,10 +32,19 @@
         
         public function setPrixAbo(){
             if($this->user_region === 'Sud'){
-                return $this->prix_abo = parent::PRIX_ABO / 3;
+                return $this->prix_abo = Users::PRIX_ABO / 3;
             }else{
-                return $this->prix_abo = parent::PRIX_ABO / 2;
+                return $this->prix_abo = Users::PRIX_ABO / 2;
             }
+        }
+
+        public function getNom(){
+            echo $this->user_name;
+        }
+    
+    
+        public function getPrixAbo(){
+            echo $this->prix_abo;
         }
     }
 ?>
