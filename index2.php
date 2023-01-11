@@ -9,15 +9,15 @@ include 'includes/autoloader.php';
 
 $pierre = new Admin('Pierre', 'abcdef', 'Sud');
 $mathilde = new Admin('Mathilde', 123456, 'Nord');
-$florian = new Utilisateur('Flo', 'flotri', 'Est');
+$florian = new Utilisateur('Florent', 'flotri', 'Est');
 
 $pierre->setPrixAbo();
 $mathilde->setPrixAbo();
 $florian->setPrixAbo();
 
 $u = 'Utilisateur';
-echo 'Valeur de ABONNEMENT dans Utilisateur : ' .$u::ABONNEMENT. '<br>';
-echo 'Valeur de ABONNEMENT dans Admin : ' .Admin::ABONNEMENT. '<br>';
+echo 'Valeur de ABONNEMENT dans Utilisateur : ' .$u::PRIX_ABO. '<br>';
+echo 'Valeur de ABONNEMENT dans Admin : ' .Admin::PRIX_ABO. '<br>';
 
 echo 'Prix de l\'abonnement pour ';
 $pierre->getNom();

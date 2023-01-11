@@ -1,7 +1,7 @@
 <?php
-    class Admin extends Utilisateur{
+    
+    class Admin extends User{
         protected static $ban;
-        public const ABONNEMENT = 5;
         
         public function __construct($n, $p, $r){
             $this->user_name = strtoupper($n);
@@ -28,9 +28,9 @@
         
         public function setPrixAbo(){
             if($this->user_region === 'Sud'){
-                return $this->prix_abo = self::ABONNEMENT;
+                return $this->prix_abo = parent::PRIX_ABO / 3;
             }else{
-                return $this->prix_abo = parent::ABONNEMENT / 2;
+                return $this->prix_abo = parent::PRIX_ABO / 2;
             }
         }
     }
